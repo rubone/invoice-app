@@ -1,0 +1,46 @@
+<div class="login-container">
+    <div class="login-card">
+      <h2 class="login-title">Login</h2>
+      <form action="#">
+        <div class="form-group">
+          <label for="email">User</label>
+          <input
+            type="text"
+            id="user"
+            name="user"
+            class="form-control"
+            ngModel
+            required
+            [(ngModel)]="login.userName"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="form-control"
+            ngModel
+            required
+            [(ngModel)]="login.password"
+          />
+        </div>
+  
+        <button type="button" (click)="onLogin()" class="login-button" >
+          Login
+        </button>
+      </form>
+      <!-- Divider -->
+    <div class="divider">or</div>
+
+    <!-- Social Login Buttons -->
+    <button class="social-login google-login" >
+      <img src="/assets/google2.png" alt="Google" /> Login with Google
+    </button>
+    <button class="social-login facebook-login">
+      <img src="/assets/facebook.png" alt="Facebook" /> Login with Facebook
+    </button>
+    </div>
+  </div>
